@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\FotosController;
+use App\Http\Controllers\NovedadesController;
 
 
 /*
@@ -34,3 +35,6 @@ Route::apiResource('persona', PersonaController::class)->middleware('auth:api');
 Route::apiResource('foto', FotosController::class)->middleware('auth:api');
 Route::get('/foto/persona/{id}', [FotosController::class, 'showByIdPersona'])->middleware('auth:api');
 Route::post('/foto/persona', [FotosController::class, 'storeFotoUpdatePersona'])->middleware('auth:api');
+
+/** Novedades */
+Route::get('/novedades', [NovedadesController::class, 'index'])->middleware('auth:api');

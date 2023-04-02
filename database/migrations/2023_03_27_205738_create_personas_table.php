@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('edad')->nullable();
             $table->text('foto_url')->nullable();
             $table->text('direccion')->nullable();
+            $table->string('estado')->nullable();
             $table->timestamps();
         });
     }
