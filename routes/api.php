@@ -28,13 +28,13 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
 /** Persona  */
-Route::apiResource('persona', PersonaController::class)->middleware('auth:api');
+Route::apiResource('persona', PersonaController::class);
 // Route::apiResource('persona', PersonaController::class)->middleware('auth:api');
 
 /** Fotos  */
-Route::apiResource('foto', FotosController::class)->middleware('auth:api');
-Route::get('/foto/persona/{id}', [FotosController::class, 'showByIdPersona'])->middleware('auth:api');
-Route::post('/foto/persona', [FotosController::class, 'storeFotoUpdatePersona'])->middleware('auth:api');
+Route::apiResource('foto', FotosController::class);
+Route::get('/foto/persona/{id}', [FotosController::class, 'showByIdPersona']);
+Route::post('/foto/persona', [FotosController::class, 'storeFotoUpdatePersona']);
 
 /** Novedades */
-Route::get('/novedades', [NovedadesController::class, 'index'])->middleware('auth:api');
+Route::get('/novedades', [NovedadesController::class, 'index']);
