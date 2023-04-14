@@ -12,7 +12,7 @@ class NovedadesController extends Controller
         $personas = Persona::orderBy('id', 'desc')->get();
         return [
             'personas' => $personas,
-            'estados' => array('EN REVISION', 'ACTIVO', 'APARTADO', 'TODO MAL', 'PERDIDO'),
+            'estados' => array('FIRME', 'ABANDONO', 'OTRO', 'EN REVISION'),
         ];
     }
 }

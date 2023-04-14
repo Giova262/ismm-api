@@ -38,6 +38,7 @@ class PersonaRequest extends FormRequest
             'foto_url' => 'nullable',
             'edad' => 'nullable',
             'direccion' => 'nullable',
+            'barrio' => 'nullable',
             'estado' => 'nullable',
             'id' => 'nullable',
         ];

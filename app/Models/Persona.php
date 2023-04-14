@@ -28,6 +28,7 @@ class Persona extends Model
         'iglesia',
         'foto_url',
         'direccion',
+        'barrio',
         'estado',
     ];
 
