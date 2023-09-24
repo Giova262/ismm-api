@@ -32,6 +32,7 @@ class AuthController extends Controller
 
     public function login(Request $request )
     {
+        return 'asdsa';
         $loginData = $request->validate([
             'name' => 'required',
             'password' => 'required',
